@@ -25,7 +25,7 @@ const routes = createBrowserRouter([
     ],
   },
   {
-    path: "/inventory/new",
+    path: "/property/new",
     element: <RegisterNewPorperty />,
   },
 ]);
