@@ -1,3 +1,4 @@
+import Sidebar from "@/components/shared/Sidebar";
 import { usePropertyStore } from "@/stores/uesPropertyStore";
 import { useEffect } from "react";
 import { Outlet } from "react-router-dom";
@@ -14,9 +15,12 @@ const PropertyLevelLayout = () => {
   }, []);
 
   return (
-    <main>
-      <Outlet />
-    </main>
+    <div className="w-full h-full min-h-screen grid grid-cols-[240px_1fr]">
+      <Sidebar />
+      <div>
+        <Outlet />
+      </div>
+    </div>
   );
 };
 
