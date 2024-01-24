@@ -15,6 +15,7 @@ import RoomConfig from "./property-config/room-config";
 import Dashboard from "./property/dashboard/dashboard";
 import PropertiesList from "./property/properties-list";
 import RegisterPage from "./register";
+import Rooms from "./room/rooms";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -38,6 +39,7 @@ const routes = createBrowserRouter(
             element={<Navigate to="dashboard" replace={true} />}
           />
           <Route path="dashboard" element={<Dashboard />} />
+          <Route path="rooms" element={<Rooms />} />
           <Route
             path="configure"
             element={<Navigate to="property" replace={true} />}

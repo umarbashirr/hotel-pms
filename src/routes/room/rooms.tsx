@@ -1,11 +1,14 @@
 import { usePropertyStore } from "@/stores/uesPropertyStore";
 import { useEffect } from "react";
 
-export default function Dashboard() {
+const Rooms = () => {
   const setPageName = usePropertyStore((state) => state.setPageName);
-  const pageTitle = "Dashboard";
+  const pageTitle = "Rooms View";
   useEffect(() => {
     setPageName(pageTitle);
   }, []);
-  return <div>Dashboard Page</div>;
-}
+
+  return <div>Rooms</div>;
+};
+
+export default Rooms;

@@ -1,3 +1,4 @@
+import Navbar from "@/components/shared/Navbar";
 import Sidebar from "@/components/shared/Sidebar";
 import { usePropertyStore } from "@/stores/uesPropertyStore";
 import { useEffect } from "react";
@@ -17,8 +18,11 @@ const PropertyLevelLayout = () => {
   return (
     <div className="w-full h-full min-h-screen grid grid-cols-[240px_1fr]">
       <Sidebar />
-      <div>
-        <Outlet />
+      <div className="py-7 px-10">
+        <Navbar />
+        <div className="py-6">
+          <Outlet />
+        </div>
       </div>
     </div>
   );

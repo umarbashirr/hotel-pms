@@ -1,6 +1,6 @@
 import { usePropertyStore } from "@/stores/uesPropertyStore";
 import { Link, NavLink } from "react-router-dom";
-import { LayoutDashboard } from "lucide-react";
+import { LayoutDashboard, Hotel, UsersRound, Bed } from "lucide-react";
 
 const Sidebar = () => {
   const propertyId = usePropertyStore((state) => state.propertyId);
@@ -29,19 +29,22 @@ const Sidebar = () => {
           to={`/property/${propertyId}/reservations`}
           className={({ isActive }) => (isActive ? activeClass : inActiveClass)}
         >
-          Reservation
+          <Hotel className="w-5 h-5" />
+          <span>Reservation</span>
         </NavLink>
         <NavLink
           to={`/property/${propertyId}/guests`}
           className={({ isActive }) => (isActive ? activeClass : inActiveClass)}
         >
-          Guests
+          <UsersRound className="w-5 h-5" />
+          <span>Guests</span>
         </NavLink>
         <NavLink
-          to={`/property/${propertyId}/rooms-view`}
+          to={`/property/${propertyId}/rooms`}
           className={({ isActive }) => (isActive ? activeClass : inActiveClass)}
         >
-          Rooms
+          <Bed className="w-5 h-5" />
+          <span>Rooms</span>
         </NavLink>
       </nav>
     </aside>
