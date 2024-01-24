@@ -1,5 +1,5 @@
 import { usePropertyStore } from "@/stores/uesPropertyStore";
-import { Button } from "../ui/button";
+import ProfileDropdown from "./ProfileDropdown";
 
 const Navbar = () => {
   const pageName = usePropertyStore((state) => state.pageName);
@@ -9,7 +9,7 @@ const Navbar = () => {
         <h2 className="text-2xl font-semibold">{pageName}</h2>
       </div>
       <div>
-        <Button>Logout</Button>
+        <ProfileDropdown />
       </div>
     </header>
   );

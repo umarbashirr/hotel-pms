@@ -27,11 +27,12 @@ export default function ProfileDropdown() {
         </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuLabel>
-          Signed in as <br /> <strong>user@gmail.com</strong>
-        </DropdownMenuLabel>
+        <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
+          <DropdownMenuItem className="cursor-pointer">
+            Configure
+          </DropdownMenuItem>
           <DropdownMenuItem className="cursor-pointer">
             Settings
           </DropdownMenuItem>
