@@ -15,6 +15,7 @@ export function FormInput({
   placeholder,
   type,
   description,
+  disabled = false,
   autoFocus = false,
 }: {
   control: any;
@@ -23,6 +24,7 @@ export function FormInput({
   placeholder?: string;
   type: string;
   description?: string;
+  disabled?: boolean;
   autoFocus?: boolean;
 }) {
   return (
@@ -30,7 +32,7 @@ export function FormInput({
       control={control}
       name={name}
       render={({ field }) => (
-        <FormItem>
+        <FormItem className="w-full">
           <FormLabel className="capitalize">{label}</FormLabel>
           <FormControl>
             <Input
@@ -38,6 +40,7 @@ export function FormInput({
               {...field}
               type={type}
               autoFocus={autoFocus}
+              disabled={disabled}
             />
           </FormControl>
           <FormMessage />

@@ -16,11 +16,14 @@ const PropertyLevelLayout = () => {
   }, []);
 
   return (
-    <div className="w-full h-full min-h-screen grid grid-cols-[240px_1fr]">
+    <div className="w-full h-full min-h-screen grid grid-cols-[240px_1fr] bg-gray-100">
       <Sidebar />
       <div className="py-7 px-10">
         <Navbar />
-        <div className="py-6">
+        <div
+          className="p-6 mt-6 rounded-2xl bg-white "
+          style={{ boxShadow: "2px 4px 8px rgba(0,0,0,0.1)" }}
+        >
           <Outlet />
         </div>
       </div>

@@ -10,8 +10,11 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { usePropertyStore } from "@/stores/uesPropertyStore";
+import { Link } from "react-router-dom";
 
 export default function ProfileDropdown() {
+  const propertyId = usePropertyStore((state) => state.propertyId);
   const logoutHandler = () => {
     console.log("logout");
   };
@@ -30,9 +33,11 @@ export default function ProfileDropdown() {
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem className="cursor-pointer">
-            Configure
-          </DropdownMenuItem>
+          <Link to={`/property/${propertyId}/configure`}>
+            <DropdownMenuItem className="cursor-pointer">
+              Configure
+            </DropdownMenuItem>
+          </Link>
           <DropdownMenuItem className="cursor-pointer">
             Settings
           </DropdownMenuItem>

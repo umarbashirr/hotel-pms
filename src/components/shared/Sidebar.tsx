@@ -11,7 +11,7 @@ const Sidebar = () => {
     "flex justify-start items-center space-x-2 text-primary p-2 rounded-sm duration-300 ease-in-out hover:bg-gray-100";
 
   return (
-    <aside className="border-r rounded-tr-3xl rounded-br-3xl h-full">
+    <aside className="border-r rounded-tr-3xl rounded-br-3xl h-full bg-white">
       <header className="py-8 px-4">
         <Link to="/" className="text-xl font-semibold ">
           Hoteliq

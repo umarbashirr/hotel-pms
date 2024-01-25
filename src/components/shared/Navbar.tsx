@@ -6,10 +6,16 @@ const Navbar = () => {
   return (
     <header className="flex items-center justify-between">
       <div>
-        <h2 className="text-2xl font-semibold">{pageName}</h2>
+        <h2 className="text-2xl font-bold">{pageName}</h2>
       </div>
       <div>
-        <ProfileDropdown />
+        <div className="flex items-center justify-end gap-4">
+          <div className="text-end text-xs">
+            <p className="font-semibold">umarbashir601@gmail.com</p>
+            <p>Admin</p>
+          </div>
+          <ProfileDropdown />
+        </div>
       </div>
     </header>
   );
